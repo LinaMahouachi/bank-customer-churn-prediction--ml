@@ -48,45 +48,12 @@ The main variables include:
 
 ---
 
-##  Project Workflow
+##  Methodology
 
-The project follows the following workflow:
+### 1. Data Preparation & Cleaning
+The raw dataset is inspected to detect data quality issues before analysis:
 
-```text
-Raw Dataset
-     │
-     ▼
-Data Exploration
-     │
-     ▼
-Data Quality Assessment
-     │
-     ▼
-Data Cleaning
-     │
-     ▼
-Data Preprocessing
-     │
-     ▼
-Exploratory Analysis
-     │
-     ▼
-Machine Learning Models
-     │
-     ▼
-Model Evaluation
-     │
-     ▼
-Business Interpretation```
-
-##  Data Preparation
-
-The initial dataset was examined to identify potential data quality issues.
-
-The data preparation process includes:
-
-- Dataset structure inspection
-- Variable identification
+- Dataset structure and variable inspection
 - Duplicate detection
 - Missing-value analysis
 - Data-type validation
@@ -94,66 +61,40 @@ The data preparation process includes:
 - Outlier detection and treatment
 - Final data quality checks
 
-The complete implementation of the data preparation process is available in the project Jupyter Notebook.
+### 2. Exploratory Data Analysis (EDA)
+EDA investigates the relationship between customer characteristics and churn, focusing on:
 
----
+- Demographics (age, gender, geography)
+- Financial variables (credit score, balance, estimated salary)
+- Banking behavior (number of products, credit card ownership, activity status, tenure)
+- Class distribution of the target variable `Exited`
 
-##  Machine Learning
+### 3. Data Preprocessing
+- Feature selection (removal of identifier columns)
+- Separation of features and target
+- Encoding of categorical variables
+- Train-test split
+- Feature scaling (for distance/linear-based models)
+- Class imbalance handling with **SMOTE** (applied **only on the training set** to avoid data leakage)
 
-The project uses supervised machine learning classification techniques to predict customer churn.
+### 4. Modeling
+Three supervised classification algorithms are compared:
 
-The classification models explored in the project include:
+| Model | Why it is used |
+|---|---|
+| **Logistic Regression** | Interpretable baseline model |
+| **K-Nearest Neighbors (KNN)** | Distance-based, non-parametric approach |
+| **Random Forest** | Ensemble model capturing non-linear relationships |
 
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-- Random Forest
+### 5. Hyperparameter Tuning
+`GridSearchCV` with cross-validation is used to systematically search for the best hyperparameter configuration for each model.
 
-Additional preprocessing and model-development techniques are applied as part of the machine learning workflow.
-
----
-
-##  Model Evaluation
-
-The models are evaluated using classification performance metrics.
-
-The evaluation includes:
-
+### 6. Evaluation Metrics
 - Accuracy
 - Precision
 - Recall
-- F1-score
+- F1-Score
 - Confusion Matrix
 - ROC-AUC
 
-These metrics are used to assess how effectively the models identify customers who are likely to churn.
-
----
-
-##  Technologies & Tools
-
-### Programming & Data Analysis
-
-- Python
-- Jupyter Notebook
-- Pandas
-- NumPy
-
-### Data Visualization
-
-- Matplotlib
-- Seaborn
-
-### Machine Learning
-
-- Scikit-learn
-- Logistic Regression
-- K-Nearest Neighbors (KNN)
-- Random Forest
-- Feature preprocessing
-- Hyperparameter tuning
-- SMOTE
-
-### Version Control
-
-- Git
-- GitHub
+> Since churn is an imbalanced problem, **Recall, F1-Score, and ROC-AUC** are prioritized over accuracy alone.
