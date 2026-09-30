@@ -1,7 +1,7 @@
 
-# 🏦 Bank Customer Churn Prediction
+#  Bank Customer Churn Prediction
 
-## 📌 Project Overview
+## Project Overview
 
 Customer churn is an important business problem in the banking sector. Understanding which customers are likely to leave can help financial institutions identify patterns in customer behavior and support data-driven retention strategies.
 
@@ -11,7 +11,7 @@ The project includes data exploration, data cleaning, preprocessing, machine lea
 
 ---
 
-## 🎯 Project Objective
+##  Project Objective
 
 The main objective of this project is to analyze bank customer data and build machine learning models capable of predicting whether a customer is likely to leave the bank.
 
@@ -24,7 +24,7 @@ The project also aims to identify relevant customer characteristics and patterns
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 The dataset contains customer demographic, financial, and banking-related information.
 
@@ -48,7 +48,7 @@ The main variables include:
 
 ---
 
-## 🔎 Project Workflow
+##  Project Workflow
 
 The project follows the following workflow:
 
