@@ -78,3 +78,82 @@ Model Evaluation
      │
      ▼
 Business Interpretation
+
+##  Data Preparation
+
+The initial dataset was examined to identify potential data quality issues.
+
+The data preparation process includes:
+
+- Dataset structure inspection
+- Variable identification
+- Duplicate detection
+- Missing-value analysis
+- Data-type validation
+- Categorical-value standardization
+- Outlier detection and treatment
+- Final data quality checks
+
+The complete implementation of the data preparation process is available in the project Jupyter Notebook.
+
+---
+
+##  Machine Learning
+
+The project uses supervised machine learning classification techniques to predict customer churn.
+
+The classification models explored in the project include:
+
+- Logistic Regression
+- K-Nearest Neighbors (KNN)
+- Random Forest
+
+Additional preprocessing and model-development techniques are applied as part of the machine learning workflow.
+
+---
+
+##  Model Evaluation
+
+The models are evaluated using classification performance metrics.
+
+The evaluation includes:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+- ROC-AUC
+
+These metrics are used to assess how effectively the models identify customers who are likely to churn.
+
+---
+
+##  Technologies & Tools
+
+### Programming & Data Analysis
+
+- Python
+- Jupyter Notebook
+- Pandas
+- NumPy
+
+### Data Visualization
+
+- Matplotlib
+- Seaborn
+
+### Machine Learning
+
+- Scikit-learn
+- Logistic Regression
+- K-Nearest Neighbors (KNN)
+- Random Forest
+- Feature preprocessing
+- Hyperparameter tuning
+- SMOTE
+
+### Version Control
+
+- Git
+- GitHub
