@@ -1,7 +1,15 @@
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-imbalanced-learn
-jupyter
+# Programming & Data Analysis
+Python
+Jupyter Notebook
+Pandas
+NumPy
+# Data Visualization
+Matplotlib
+Seaborn
+# Machine Learning
+Scikit-learn
+Logistic Regression
+K-Nearest Neighbors
+Random Forest
+GridSearchCV
+SMOTE
